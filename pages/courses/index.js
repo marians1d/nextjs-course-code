@@ -14,7 +14,10 @@ function CoursesPage(params) {
                 <ul>
                     {courses.map(({key, name}) => (
                         <li key={key}>
-                            <Link href={`/courses/${key}`}>{name}</Link>
+                            <Link href={{
+                                pathname: '/courses/[courseId]',
+                                query: { courseId: key }
+                            }}>{name}</Link>
                         </li>
                     ))}
                 </ul>
