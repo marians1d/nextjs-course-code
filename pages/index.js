@@ -1,7 +1,9 @@
 import Link from "next/link";
-import router from 'next/router'
+import { useRouter } from 'next/router'
 
 function HomePage() {
+    const router = useRouter();
+
     const loginHandler = () => {
         setTimeout(() => router.push('/login'), 3000)
     }
